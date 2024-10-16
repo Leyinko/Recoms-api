@@ -1,0 +1,186 @@
+div [id$='s-collection'] {
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  /* padding: 10px; */
+  border-radius: var(--button-radius);
+}
+
+div [id$='s-collection']:hover {
+  cursor: pointer;
+  outline: 1px solid var(--button-hover);
+}
+
+div [id$='s-collection'] img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: var(--button-radius);
+}
+
+div [id$='s-collection'].selected {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  outline: 1px solid var(--button-hover);
+}
+
+/* Edition Menu */
+
+#dashboard #edition-card-menu img {
+  position: absolute;
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+  filter: invert(1) drop-shadow(2px 2px 2px black);
+  z-index: 77777;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+  -webkit-user-drag: none;
+}
+
+#dashboard #edition-card-menu img:hover {
+  opacity: 1;
+  width: 23px;
+  height: 23px;
+}
+
+#dashboard #edition-card-menu.blur {
+  display: none;
+}
+
+#dashboard #edit-button {
+  width: 23px;
+  height: 23px;
+  top: -12px;
+  right: -10px;
+}
+
+#dashboard #trash-button {
+  width: 23px;
+  height: 23px;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#dashboard #info-button {
+  width: 23px;
+  height: 23px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#item-information {
+  /* margin-top: 30px; */
+}
+
+#item-information h3 {
+  /* margin-top: 30px; */
+  margin: 10px;
+}
+
+#item-information p {
+  opacity: 0.7;
+  margin: 0px;
+  font-size: 11px;
+  font-weight: 200;
+}
+
+/* Edition Info Users */
+
+#users-edit {
+  margin-top: 40px;
+}
+
+#role-selection {
+  margin-top: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 0.7125rem;
+  /* border-bottom: var(--border-modal); */
+  /* border: 1px solid red; */
+}
+
+#role-selection h5 {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  /* font-weight: 400; */
+}
+
+#role-selection span {
+  opacity: 0.6;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 5px;
+  width: 40px;
+  /* height: 25px; */
+  pointer-events: all;
+  font-weight: 200;
+}
+
+#role-selection span.selected {
+  opacity: 1;
+  border-radius: var(--button-radius);
+  outline: 1px solid var(--button-hover);
+}
+
+#role-selection img {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  opacity: 0.4;
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+
+#dashboard #users-edit img:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+#collections-edit {
+  margin-top: 10px;
+  padding: 10px 0px;
+  /* height: 160px; */
+  width: 100%;
+  overflow: scroll;
+  overflow-y: hidden;
+  /* border: 1px solid red; */
+}
+
+#dashboard-collections-items {
+  margin-top: 15px;
+  margin-left: 5px;
+  padding: 10px 5px 27px 5px;
+  display: flex;
+  /* justify-content: center; */
+  height: 140px;
+  overflow: scroll;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 888888888;
+  /* border-bottom: var(--border-modal); */
+}

@@ -1,0 +1,37 @@
+#register_container h1 {
+  padding-top: 26px;
+  margin-right: 65px;
+}
+
+#register_container form {
+  /* padding-top: 15px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.825rem;
+}
+
+#register_container button {
+  margin: 0px 0px 40px 0px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+#register_container button.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#register_container a {
+  opacity: 0.4;
+  text-decoration: none;
+}
+
+#register_container a:hover {
+  opacity: 1;
+}
+
+#register_container a:visited {
+  color: white;
+}

@@ -1,0 +1,93 @@
+#menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.75rem;
+  background-color: #121212;
+  z-index: 11111;
+}
+
+#menu a {
+  opacity: 0.6;
+  padding: 5px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+#menu a.on {
+  outline: 1px solid var(--button-hover);
+}
+
+#menu a.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#menu a:hover {
+  outline: 1px solid var(--button-hover);
+}
+
+#menu a:visited {
+  color: white;
+}
+
+#status-container {
+  position: absolute;
+  left: var(--viewport-distance);
+  opacity: 0.8;
+  display: none;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#status-container.on {
+  outline: 1px solid var(--button-hover);
+}
+
+#status-container img:hover {
+  transition: all 0.3s ease-in;
+  outline: 1px solid var(--button-hover);
+}
+
+#status-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+#status-container.active {
+  display: block;
+  pointer-events: all;
+}
+
+.disconnect {
+  cursor: pointer;
+  filter: invert(1);
+  position: absolute;
+  top: -15px;
+  left: 60px;
+  width: 35px;
+  height: 35px;
+  background: url('/assets/icons/disconnect.svg') center/contain no-repeat;
+  pointer-events: all;
+  transition: all 0.2s ease-in-out;
+}
+
+.disconnect:hover {
+  transition: all 0.2s ease-in-out;
+  scale: 1.1;
+}

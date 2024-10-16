@@ -1,0 +1,180 @@
+/* New Collection */
+
+.new-collection-title {
+  opacity: 0.3;
+  font-weight: 200;
+}
+
+.instructions {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 100;
+}
+
+form[action='create-collection'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.825rem;
+  margin-bottom: 50px;
+}
+
+form[action='create-collection'] button {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+form[action='create-collection'] button.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* User Collection */
+
+#user-recommendations {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1.375rem;
+  overflow: scroll;
+  width: 734px;
+  padding: 30px 30px 100px 30px;
+  height: 300px;
+  flex-wrap: wrap;
+}
+
+#user-recommendations div:hover {
+  border: 1px solid rgba(14, 8, 8, 0.274);
+}
+
+#profile > img:not(#new-recommendation) {
+  position: fixed;
+  bottom: 0px;
+  bottom: calc(var(--viewport-distance) + 26px);
+  filter: invert(1);
+  width: 20px;
+  transition: all 0.3s ease;
+}
+
+#profile > img:not(#new-recommendation).blur {
+  display: none;
+}
+
+#profile > img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#user-recommendations.blur {
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+  filter: blur(5px) opacity(0.1);
+}
+
+#previous {
+  opacity: 0.5;
+  left: 45%;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+#next {
+  opacity: 0.5;
+  left: 55%;
+  filter: invert(1);
+  transform: translateX(-50%);
+}
+
+#user-recommendations > div:hover {
+  cursor: pointer;
+}
+
+/* Collection Card Bottom */
+
+#user-collection-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 90px;
+  left: var(--viewport-distance);
+  height: 110px;
+  width: 210px;
+  border-radius: var(--button-radius);
+  background-color: var(--background-color-button);
+  box-shadow: 0px 0px 20px 20px var(--background-color);
+  z-index: 666666;
+}
+
+#user-collection-card h1 {
+  position: absolute;
+  top: -35px;
+  left: 5%;
+  font-size: 14px;
+}
+
+#user-collection-card img:first-of-type:not(#new-recommendation) {
+  opacity: 0.8;
+  height: 100px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: var(--button-radius);
+}
+
+#new-recommendation {
+  opacity: 0.4;
+  position: fixed;
+  bottom: calc(var(--viewport-distance) + 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  filter: grayscale(1) invert(1);
+  -webkit-user-drag: none;
+  transition: all 0.3s ease;
+}
+
+#new-recommendation.active {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.2) rotate(44deg);
+}
+
+#new-recommendation.active:hover {
+  transform: translateX(-50%) scale(1.2) rotate(44deg);
+}
+
+#new-recommendation:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateX(-50%) scale(1.2);
+}
+
+#drop-confirmation {
+  font-size: xx-large;
+  position: fixed;
+  bottom: 90px;
+  left: var(--viewport-distance);
+  height: 110px;
+  width: 210px;
+  transition: all 0.3s ease-in-out;
+  z-index: 777777;
+}
+
+#drop-confirmation:hover {
+  border: none;
+  cursor: pointer;
+}
+
+#drop-collection {
+  font-size: 11px;
+  position: fixed;
+  bottom: calc(var(--viewport-distance) + 3px);
+  left: calc(var(--viewport-distance) + 4px);
+  transition: all 0.3s ease-in-out;
+}

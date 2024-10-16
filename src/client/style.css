@@ -1,0 +1,140 @@
+:root {
+  --background-color-button: #1a1a1a;
+
+  --button-radius: 8px;
+  --button-padding: 0.6em 1.2em;
+  --viewport-distance: 50px;
+
+  --button-hover: #646cff;
+  --background-color: #1212124f;
+  --background-input-color: #5050503d;
+  --outline-input-color: #80808079;
+
+  --box-shadow: 1px 1px 5px 1px rgba(148, 148, 148, 0.116);
+  --border-modal: 1px solid rgba(128, 128, 128, 0.267);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color-scheme: light dark;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--background-color);
+  word-spacing: 1px;
+
+  user-select: none;
+}
+
+*:not(#dashboard) {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  margin-top: 20px;
+  width: 90vw;
+}
+
+#recom-logo {
+  display: block;
+  position: fixed;
+  width: 600px;
+  z-index: 999999999999;
+  pointer-events: none;
+  opacity: 0.009;
+  filter: invert(1);
+}
+
+#recom-logo.blur {
+  display: none;
+}
+
+#menu a,
+button {
+  border-radius: var(--button-radius);
+  border: 1px solid transparent;
+  padding: var(--button-padding);
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-color-button);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--button-hover);
+}
+
+#picture-preview-container img {
+  margin: 10px;
+  border-radius: 15px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+}
+
+img:not([role='button']),
+a {
+  -webkit-user-drag: none;
+}
+
+label:has(> input[type='file']) {
+  font-size: 14px;
+  margin: 10px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: var(--button-radius);
+  opacity: 0.6;
+}
+
+input[type='file'] {
+  display: none;
+}
+
+input::selection {
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+input::placeholder {
+  font-weight: 400;
+  opacity: 0.4;
+}
+
+input {
+  width: 150px;
+  padding: 0px 10px;
+  line-height: 33px;
+  text-align: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 0.9em;
+  outline: 1px solid var(--outline-input-color);
+  border-radius: var(--button-radius);
+  background-color: var(--background-input-color);
+  border: none;
+  color: rgb(205, 197, 197);
+}
+
+.preview-img {
+  border: var(--border-modal);
+  transition: all 0.1s ease-in;
+}
+
+.preview-img:hover {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}

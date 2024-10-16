@@ -1,0 +1,18 @@
+#page-not-found img {
+  filter: invert(1);
+  width: 400px;
+}
+
+#access-denied img {
+  position: absolute;
+  left: 50%;
+  /* top: -500%; */
+  transform: translate(-50%, -50%);
+  filter: grayscale(1);
+}
+
+#authentication img {
+  filter: invert(1) grayscale(1);
+  width: 200px;
+  /* opacity: 0.; */
+}

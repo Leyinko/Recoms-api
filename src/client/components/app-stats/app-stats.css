@@ -1,0 +1,42 @@
+#app-stats {
+  opacity: 0.8;
+  position: fixed;
+  display: flex;
+  gap: 0.4125rem;
+  align-items: center;
+  left: 30px;
+  bottom: 0px;
+  height: 80px;
+  width: 200px;
+}
+
+#app-stats span:first-child {
+  border: 1px outset grey;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+#app-stats span.inactive {
+  background-color: rgba(172, 29, 29, 0.877);
+}
+
+#app-stats span.active {
+  background-color: rgba(80, 177, 80, 0.551);
+}
+
+#app-stats h6 {
+  margin: 0px;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+#app-stats p {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  right: 0px;
+  font-size: 12px;
+  opacity: 0.5;
+  font-weight: 100;
+}

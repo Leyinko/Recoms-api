@@ -1,0 +1,25 @@
+#categories-container {
+  display: none;
+  display: flex;
+  justify-content: center;
+  gap: 0.825rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.082);
+}
+
+#categories-container p {
+  font-size: 13px;
+  opacity: 0.5;
+  padding: 5px;
+  border-radius: var(--button-radius);
+}
+
+#categories-container p.selected {
+  opacity: 1;
+  outline: 1px solid var(--button-hover);
+}
+
+#categories-container p:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  outline: 1px solid var(--button-hover);
+}

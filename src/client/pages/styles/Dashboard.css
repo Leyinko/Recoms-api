@@ -1,0 +1,94 @@
+#dashboard {
+  width: 80svw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: visible;
+  gap: 3.825rem;
+}
+
+#dashboard h1 {
+  font-size: 1.7rem;
+  opacity: 0.3;
+  font-weight: 200;
+  position: absolute;
+  bottom: -80px;
+}
+
+#dashboard > div:not(#dashboard-edition-panel) {
+  margin-bottom: 50px;
+  padding: 28px 10px;
+  display: flex;
+  gap: 1.375rem;
+  overflow: scroll;
+  width: 324px;
+  min-height: 260px;
+  max-height: 260px;
+  flex-wrap: wrap;
+}
+
+/* USERS */
+
+#dashboard > div:last-of-type {
+  justify-content: flex-end;
+}
+
+#dashboard #confirmation-delete {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+#dashboard-edition-panel {
+  display: none;
+  margin-bottom: 25px;
+  justify-content: center;
+  align-content: center;
+  padding: 20px;
+  min-width: 400px;
+  max-width: 400px;
+  max-height: 320px;
+  min-height: 320px;
+  padding: 8px 25px;
+  border: var(--border-modal);
+  border-radius: var(--button-radius);
+  background-color: rgba(128, 128, 128, 0.019);
+  z-index: 99999999999999999999;
+}
+
+#dashboard-edition-panel h1 {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -120px;
+}
+
+/* Seed Reset */
+
+#seed-reset {
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
+#seed-reset p {
+  font-size: 11px;
+  opacity: 0.4;
+  font-weight: 100;
+}
+
+#seed-reset button {
+  padding: 5px 10px;
+  outline: var(--border-modal);
+}
+
+#seed-reset button img {
+  width: 30px;
+  filter: invert(1);
+}

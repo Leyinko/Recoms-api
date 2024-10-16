@@ -1,0 +1,50 @@
+#explore #categories-container {
+  display: none;
+  position: fixed;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  z-index: 99999999999;
+  gap: 1.225rem;
+  transition: all 0.1s ease-in-out;
+}
+
+#explore #categories-container.access {
+  display: flex;
+}
+
+#explore #categories-container p {
+  font-size: 13px;
+  opacity: 0.3;
+  padding: 5px 15px;
+  border-radius: var(--button-radius);
+}
+
+#explore #categories-container p.selected {
+  scale: 1.1;
+  opacity: 1;
+  outline: 1px solid var(--button-hover);
+  transition: all 0.1s ease-in-out;
+}
+
+#explore #categories-container p:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  outline: 1px solid var(--button-hover);
+}
+
+#recommendations-container {
+  width: 1106px;
+  padding: 30px 30px 70px 30px;
+  margin: 0 auto;
+  margin-top: 170px;
+  display: flex;
+  gap: 2.5rem;
+  min-height: 330px;
+  align-items: center;
+  flex-wrap: wrap;
+}

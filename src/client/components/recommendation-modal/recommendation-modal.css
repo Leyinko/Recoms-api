@@ -1,0 +1,177 @@
+[id*='-recommendation-modal'] {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  width: 600px;
+  height: 350px;
+  padding: 15px 35px;
+  border-radius: 10px;
+  background-color: var(--background-color-button);
+  animation: create-recommendation 0.3s backwards ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 33333;
+}
+
+[id*='-recommendation-modal'] > h1 {
+  opacity: 0.007;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  font-size: 300px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1111;
+}
+
+@keyframes create-recommendation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+[id*='-recommendation-modal'] input {
+  outline-color: rgba(128, 128, 128, 0.178);
+  height: 30px;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+#title-cover-rate {
+  margin-top: 24px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title-cover-rate input:first-of-type {
+  margin-bottom: 10px;
+}
+
+[id*='-recommendation-modal'] label:has(> input[type='file']) {
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95px;
+  width: 90px;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+  font-weight: 100;
+  color: grey;
+}
+
+[id*='-recommendation-modal'] #picture-preview-container img {
+  margin: 3px;
+}
+
+#star-container {
+  display: flex;
+  gap: 0.3125rem;
+  margin-top: 10px;
+}
+
+#star-container img {
+  opacity: 0.1;
+  min-width: 20px;
+  width: 6px;
+  height: 6px;
+  object-fit: cover;
+}
+
+#star-container img.rated {
+  opacity: 1;
+}
+
+#star-container img:hover {
+  cursor: pointer;
+}
+
+#tags-description {
+  position: fixed;
+  right: 65px;
+  top: 140px;
+}
+
+[id*='-recommendation-modal'] form textarea {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 15px 18px;
+  resize: none;
+  outline: none;
+  border-radius: 10px;
+  width: 290px;
+  height: 82px;
+  font-size: 12px;
+  opacity: 0.6;
+  line-height: 1.5;
+  background-color: transparent;
+  border: 1px solid rgba(128, 128, 128, 0.267);
+}
+
+[id*='-recommendation-modal'] form textarea::placeholder {
+  font-size: 12px;
+}
+
+[id*='-recommendation-modal'] form textarea::selection {
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+label[for='tags'] {
+  position: absolute;
+  right: 0px;
+  top: -47px;
+}
+
+#tags {
+  width: 100px;
+}
+
+#tags + button {
+  border: 1px solid #ffffff18;
+}
+
+#tags + button:hover {
+  border-color: #ffffff59;
+}
+
+#tags-container {
+  position: fixed;
+  bottom: 74px;
+  right: 67px;
+  width: 260px;
+  height: 50px;
+}
+
+#tags-container span {
+  font-size: 11px;
+  float: right;
+  opacity: 0.2;
+  font-weight: 100;
+  border-radius: 8px;
+}
+
+#tags-container span:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+[id*='send-'] {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: rgba(128, 128, 128, 0.082);
+}
+
+[id*='send-'].active {
+  opacity: 1;
+  pointer-events: all;
+}

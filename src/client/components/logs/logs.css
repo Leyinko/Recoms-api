@@ -1,0 +1,47 @@
+#logs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  width: 500px;
+  height: 70px;
+  position: fixed;
+  bottom: var(--viewport-distance);
+  right: 100px;
+  pointer-events: none;
+}
+
+#logs h3 {
+  font-weight: 200;
+  font-size: 14px;
+}
+
+#logs h5 {
+  font-weight: 200;
+  opacity: 0.6;
+}
+
+.loading-logo {
+  display: none;
+  position: absolute;
+  right: -45px;
+  filter: invert(3);
+  width: 25px;
+  height: 25px;
+  opacity: 0.5;
+  background: url('/assets/icons/loading.svg') center/cover no-repeat;
+}
+
+.loading-logo.loading {
+  display: block;
+  animation: loading 1s forwards infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,51 @@
+#login_container {
+  width: fit-content;
+}
+
+#login_container span {
+  font-size: 13px;
+}
+
+#login_container h1 {
+  margin: -8px;
+  padding-right: 65px;
+}
+
+#login_container form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.825rem;
+}
+
+#login_container input::selection {
+  background-color: rgba(128, 128, 128, 0.315);
+}
+
+#login_container button {
+  pointer-events: none;
+  opacity: 0.6;
+  margin: 25px 0px 50px 0px;
+}
+
+#login_container button.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#login_container a {
+  opacity: 0.4;
+  text-decoration: none;
+  font-size: 14px;
+  padding-right: 40px;
+}
+
+#login_container a:hover {
+  opacity: 1;
+}
+
+#login_container a:visited {
+  color: white;
+}
