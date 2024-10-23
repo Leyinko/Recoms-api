@@ -21,21 +21,22 @@
   pointer-events: none;
 }
 
+#menu a:first-of-type {
+  display: none;
+}
+
 #menu a.on {
   outline: 1px solid var(--button-hover);
 }
 
 #menu a.active {
+  display: block;
   opacity: 1;
   pointer-events: all;
 }
 
 #menu a:hover {
   outline: 1px solid var(--button-hover);
-}
-
-#menu a:visited {
-  color: white;
 }
 
 #status-container {

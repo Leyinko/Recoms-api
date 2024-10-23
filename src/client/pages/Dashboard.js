@@ -72,7 +72,8 @@ export const dashboardUpdateUserRole = (user, role) => {
 
 // 🌍
 export const dashboardDeleteActions = (collection) => {
-  const username = document.querySelector(`#${collection}-container div.selected`).id.match(/^[a-zA-Z]*(?=-)/)[0];
+  const username = document.querySelector(`#${collection}-container div.selected`).id.match(/^[a-zA-Z0-9]*(?=-)/)[0];
+  console.log(username);
 
   if (collection === 'collections') {
     // 🌍

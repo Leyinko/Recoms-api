@@ -173,7 +173,7 @@ div [id$='s-collection'].selected {
   margin-left: 5px;
   padding: 10px 5px 27px 5px;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   height: 140px;
   overflow: scroll;
   /* flex-direction: column; */

@@ -9,6 +9,7 @@
   bottom: var(--viewport-distance);
   right: 100px;
   pointer-events: none;
+  z-index: 9999999999999999999999999999999999999;
 }
 
 #logs h3 {

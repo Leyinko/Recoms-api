@@ -1,0 +1,273 @@
+/* Tablets */
+@media screen and (max-width: 1280px) {
+  /* Navigation */
+  #menu {
+    /* gap: 1.75rem; */
+  }
+
+  #menu a {
+    width: fit-content;
+    /* font-size: 0.7em; */
+  }
+
+  #status-container {
+    position: relative;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Recommendations Profile */
+  #user-recommendations {
+    /* top: 20%; */
+    justify-content: center;
+    min-width: unset;
+    /* border: 1px solid red; */
+  }
+
+  /* Recommendations Explore */
+  #recommendations-container {
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Explore */
+  #explore #categories-container {
+    top: 130px;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    row-gap: 0.3rem;
+    padding: 10px 0px;
+    transition: none;
+  }
+
+  #explore #categories-container p {
+    margin: 3px;
+    font-size: 11px;
+  }
+
+  /* Dashboard */
+
+  #dashboard h1 {
+    font-size: 1.3rem;
+  }
+
+  #dashboard {
+    position: unset;
+  }
+
+  #dashboard > div:not(#dashboard-edition-panel) {
+    position: absolute;
+    bottom: 30px;
+    padding-top: 40px;
+    max-width: 270px;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  #dashboard > div:not(#dashboard-edition-panel):first-of-type {
+    left: 50px;
+  }
+
+  #dashboard > div:not(#dashboard-edition-panel):last-of-type {
+    right: 50px;
+  }
+
+  #dashboard h1:not(#dashboard-edition-panel h1) {
+    height: fit-content;
+    top: -20px;
+  }
+
+  #dashboard-edition-panel {
+    min-width: 350px;
+    max-width: 350px;
+    max-height: 290px;
+    min-height: 290px;
+    position: fixed;
+    transform: translateY(-50%);
+    padding: 10px;
+  }
+
+  #dashboard-edition-panel h1 {
+    width: 300px;
+    bottom: -100px;
+  }
+
+  #users-edit {
+    margin-top: 20px;
+  }
+
+  #collections-edit {
+    margin-top: 0px;
+  }
+
+  #dashboard-collections-items {
+    margin-top: 0px;
+  }
+
+  #seed-reset {
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+  }
+
+  #seed-reset p {
+    font-size: 10px;
+    width: 300px;
+  }
+}
+
+/* Smartphones */
+@media screen and (max-width: 681px) {
+  /* Main */
+  #recom-logo {
+    width: 400px;
+  }
+
+  /* Profile */
+  #user-recommendations {
+    top: 20%;
+  }
+
+  /* Navigation */
+  #menu {
+    gap: 1.75rem;
+  }
+
+  #menu a {
+    width: fit-content;
+    font-size: 0.7em;
+  }
+
+  #status-container {
+    position: relative;
+    left: 0px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .disconnect {
+    top: -15px;
+    left: 45px;
+    width: 27px;
+    height: 27px;
+  }
+
+  /* AppStats */
+  #app-stats p {
+    bottom: 60px;
+    width: 100%;
+    font-size: 10px;
+  }
+
+  /* Logs */
+  #logs {
+    bottom: 80px;
+    right: 30px;
+    width: fit-content;
+  }
+
+  .loading-logo {
+    right: 0px;
+    bottom: 60px;
+    width: 17px;
+    height: 17px;
+  }
+
+  /* Profile */
+  /* New Collection */
+  .instructions {
+    font-size: 9px;
+  }
+
+  /* User Collection */
+  #new-recommendation {
+    width: 40px;
+    bottom: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  [id*='-recommendation-modal'] {
+    align-items: center;
+    top: 42%;
+    left: 50%;
+    width: 330px;
+    height: 450px;
+  }
+
+  [id*='-recommendation-modal'] #categories-container {
+    position: absolute;
+    top: 25px;
+    padding: 10px 20px 10px 10px;
+    right: 0px;
+    flex-direction: column;
+    gap: 0rem;
+    border-left: 1px solid rgba(128, 128, 128, 0.082);
+    border-bottom: none;
+    border-top-right-radius: 8px;
+  }
+
+  #categories-container p {
+    margin: 5px;
+    font-size: 11px;
+  }
+
+  [id*='-recommendation-modal'] > h1 {
+    font-size: 100px;
+    top: 90%;
+  }
+
+  #title-cover-rate {
+    margin: 0 55px;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+
+  #star-container {
+    margin-bottom: 10px;
+  }
+
+  #tags-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    right: 0px;
+    margin-right: 95px;
+  }
+
+  label[for='tags'] {
+    left: 42%;
+    transform: translateX(-50%);
+  }
+
+  #tags + button {
+    position: absolute;
+    margin-left: 4px;
+    top: -1px;
+  }
+
+  [id*='-recommendation-modal'] form textarea {
+    width: 200px;
+    height: 52px;
+  }
+
+  #tags-container {
+    bottom: 65px;
+    left: 5px;
+  }
+
+  /* Dashboard */
+
+  #dashboard-edition-panel {
+    top: 32%;
+  }
+
+  #dashboard > div:not(#dashboard-edition-panel) {
+    max-width: 167px;
+  }
+}

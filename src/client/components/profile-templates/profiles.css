@@ -45,7 +45,7 @@ form[action='create-collection'] button.active {
   display: flex;
   gap: 1.375rem;
   overflow: scroll;
-  width: 734px;
+  min-width: 734px;
   padding: 30px 30px 100px 30px;
   height: 300px;
   flex-wrap: wrap;
@@ -77,19 +77,6 @@ form[action='create-collection'] button.active {
   pointer-events: none;
   transition: all 0.5s ease-in-out;
   filter: blur(5px) opacity(0.1);
-}
-
-#previous {
-  opacity: 0.5;
-  left: 45%;
-  transform: translateX(-50%) rotate(180deg);
-}
-
-#next {
-  opacity: 0.5;
-  left: 55%;
-  filter: invert(1);
-  transform: translateX(-50%);
 }
 
 #user-recommendations > div:hover {

@@ -7,7 +7,7 @@
 }
 
 #categories-container p {
-  font-size: 13px;
+  font-size: 12px;
   opacity: 0.5;
   padding: 5px;
   border-radius: var(--button-radius);

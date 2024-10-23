@@ -38,10 +38,10 @@
 }
 
 #recommendations-container {
-  width: 1106px;
+  max-width: 1106px;
   padding: 30px 30px 70px 30px;
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 190px;
   display: flex;
   gap: 2.5rem;
   min-height: 330px;

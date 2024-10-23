@@ -1,6 +1,7 @@
 import { displayLogMessage } from './components/logs/logs';
 import { Navigation } from './components/nav/navigation';
 import './style.css';
+import './santi-sponsive.css';
 
 // 🧠 Recom-API Auto-Launch 🐛
 

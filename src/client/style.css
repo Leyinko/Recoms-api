@@ -29,6 +29,10 @@
   scrollbar-width: none;
 }
 
+a:visited {
+  color: white;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -36,11 +40,12 @@ body {
   align-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #121212;
 }
 
 #app {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -94,6 +99,7 @@ a {
 }
 
 label:has(> input[type='file']) {
+  border: var(--border-modal);
   font-size: 14px;
   margin: 10px;
   padding: 6px 12px;

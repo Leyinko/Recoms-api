@@ -114,7 +114,7 @@ export const dashboardControlPanel = (e, parent) => {
     editionContainer.appendChild(extra);
 
     const user = document.createElement('h3');
-    user.textContent = selection.id.match(/^[a-zA-Z]*(?=-)/)[0];
+    user.textContent = selection.id.match(/^[a-zA-Z0-9]*(?=-)/)[0];
     extra.appendChild(user);
 
     let dataset = [selection.dataset.created.match(/^\d.*(?=T)/)[0], selection.dataset.access];
