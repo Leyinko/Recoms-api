@@ -14,7 +14,7 @@ Recoms-API is a simple application that enables users to create customizable col
 - Includes authentication, token-based authorization, role-based access control, and secure session management.
 - Advanced bulk data seeding via script commands.
 - Advanced Cloudinary image storage and management.
-- Both Development and Production way to explore the application.
+- Both Development and Production modes to explore the application.
   <br>
   <br>
 
