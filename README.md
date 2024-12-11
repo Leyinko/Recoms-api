@@ -1,80 +1,92 @@
 # Recoms-API
 
 ![Recoms-API](public/assets/readme/Recoms-API.png)
-<br>
 
-Recoms-API is a simple application that enables users to create customizable collections of item recommendations. Users can build personal collections, update or delete items, and store them in a centralized database. These collections can either be used for personal storage or shared with other users on the platform.
-<br>
+## Table of Contents
 
-### Features
+1. [Features](#features)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Screenshots](#screenshots)
 
-- Built with the Vite-Express package, integrating both the front-end and server-side.
-- Backend implemented with Express.js and database management using MongoDB.
-- Centralized database, structured into partitions for users, collections, and recommendations.
-- Includes authentication, token-based authorization, role-based access control, and secure session management.
-- Advanced bulk data seeding via script commands.
-- Advanced Cloudinary image storage and management.
-- Both Development and Production modes to explore the application.
-  <br>
-  <br>
+# Recoms-API Documentation
 
-## Setting up
+Recoms-API is a versatile application that enables users to create and manage customizable collections of item recommendations. Users can build personal collections, update or delete items, and store them in a centralized database. These collections can be used for personal storage or shared with other users on the platform.
 
-First, clone the repository in a local folder.<Br>
-Launch the build command to create the `/dist` folder with the `npm run build`.
+## Features
 
-Create and configure a `.env` file to match the environment settings.
+- Vite-Express integration for seamless front-end and server-side development
+- Express.js backend with MongoDB database management
+- Centralized database structured into partitions for users, collections, and recommendations
+- Authentication, token-based authorization, role-based access control, and secure session management
+- Advanced bulk data seeding via script commands
+- Cloudinary integration for image storage and management
+- Development and Production modes for flexible exploration and deployment
 
-#### Follow the image below:
+## Getting Started
 
-![Explore](public/assets/readme/.env.png)
-
-1- Set the MongoDB URL. <br>
-2- Define a customized string for token generation.<br>
-3- Add your Cloudinary API credentials for images management. <br>
-4- Set your base URL.<br>
-<br>
-Ensure that the `VITE_API_URL` points to your local launch point and API base route.
-Correct configuration is essential for proper API fetching.
-
-##### Optional
-
-The application includes an initial signal on the home login page, which retrieves your database name and some others details.
-Make sure to name your MongoDB cluster in the URL, as MongoDB will default to `test` if the name is not set.
-
-The database name should be placed between `mongodb.net/` and the `?` in the URL, like so:
+1. Clone the repository to a local folder
+2. Navigate to the project directory
+3. Run the build command to create the `/dist` folder:
 
 ```
-DB_URL=mongodb+srv://<user>:<password>@recoms-api.quack.mongodb.net/NAME-HERE?
+npm run build
 ```
 
-### Seeding Data or Register to Start
+### Environment Setup
 
-Run the `npm run seed All` command in the console to populate the database and fully explore the App’s features or create a new account ont the Connect page to get started.
+Create and configure a `.env` file in the project root with the following structure:
 
-Check the `seeds.js` file for some customize bulk load details.
-<br>
-<br>
+![Environment Setup](public/assets/readme/.env.png)
 
-## Launch and Explore
+1. Set the MongoDB URL
+2. Define a custom string for token generation
+3. Add your Cloudinary API credentials
+4. Set your base URL
 
-Use Recoms-API officially via [Recoms-API](https://recoms-api.onrender.com/login) on Render or locally with [Node.js](https://nodejs.org/) as Development mode with `npm run dev` or as a Production simulation deployment with `npm run start` commands.
+Ensure that `VITE_API_URL` points to your local launch point and API base route for proper API fetching.
 
-Keep in mind that Render has a policy for free instance that will spin down for inactivity, which can delay requests by 50 seconds or more - Be patient on first loading!
-<br>
-<br>
+#### Optional: Database Naming
 
-<div style="display:flex">
-<img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML" style="width:40px">
-<img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"" alt="HTML" title="HTML" style="width:40px">
-<img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript"" alt="HTML" title="HTML" style="width:40px">
-<img src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png" alt="mongoDB" title="mongoDB"" alt="HTML" title="HTML" style="width:40px">
-<img src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png" alt="Express" title="Express"" alt="mongoDB" title="mongoDB"" alt="HTML" title="HTML" style="width:40px">
-<img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="Node.js" title="Node.js"" alt="Express" title="Express"" alt="mongoDB" title="mongoDB"" alt="HTML" title="HTML" style="width:40px">
-<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62091613/261395532-b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35.png" alt="Vite" title="Vite"" alt="Node.js" title="Node.js"" alt="Express" title="Express"" alt="mongoDB" title="mongoDB"" alt="HTML" title="HTML" style="width:40px">
+Name your MongoDB cluster in the URL to avoid the default 'test' name:
+
+```
+DB_URL=mongodb+srv://`<user>`:`<password>`@recoms-api.quack.mongodb.net/YOUR-DB-NAME?
+```
+
+## Usage
+
+### Seeding Data
+
+To populate the database and explore all features:
+
+```
+npm run seed All
+```
+
+Alternatively, create a new account on the Connect page to get started.
+
+For customized bulk loading, check the `seeds.js` file.
+
+### Running the Application
+
+- Official deployment: [Recoms-API on Render](https://recoms-api.onrender.com/login)
+- Local development: `npm run dev`
+- Production simulation: `npm run start`
+
+Note: Free Render instances may have a 50+ second delay on first load due to inactivity spin-down.
+
+## Tech Stack
+
+<div style="display:flex; gap: 10px;">
+<img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML" width="40">
+<img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS" width="40">
+<img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" alt="JavaScript" title="JavaScript" width="40">
+<img src="https://user-images.githubusercontent.com/25181517/182884177-d48a8579-2cd0-447a-b9a6-ffc7cb02560e.png" alt="mongoDB" title="mongoDB" width="40">
+<img src="https://user-images.githubusercontent.com/25181517/183859966-a3462d8d-1bc7-4880-b353-e2cbed900ed6.png" alt="Express" title="Express" width="40">
+<img src="https://user-images.githubusercontent.com/25181517/183568594-85e280a7-0d7e-4d1a-9028-c8c2209e073c.png" alt="Node.js" title="Node.js" width="40">
+<img src="https://github-production-user-asset-6210df.s3.amazonaws.com/62091613/261395532-b40892ef-efb8-4b0e-a6b5-d1cfc2f3fc35.png" alt="Vite" title="Vite" width="40">
 </div>
-<br>
-<br>
 
 ## Screenshots
 
@@ -82,5 +94,5 @@ Keep in mind that Render has a policy for free instance that will spin down for 
 ![Update](public/assets/readme/Profile-update.png)
 ![Explore](public/assets/readme/Explore.png)
 ![Admin](public/assets/readme/Admin.png)
-![Admin-access](public/assets/readme/admin-manage.png)
+![Admin Access](public/assets/readme/admin-manage.png)
 ![Responsive](public/assets/readme/responsive.png)
