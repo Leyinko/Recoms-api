@@ -65,8 +65,10 @@ export const deleteUser = async (req, res, next) => {
 
     // From Collections Collection
     const userCollection = await Collection.findOne({ owner: oficialUser._id });
-    await deleteImgCloudinary(userCollection.img);
-    await userCollection.deleteOne();
+    if (userCollection) {
+      await deleteImgCloudinary(userCollection.img);
+      await userCollection.deleteOne();
+    }
 
     // Collection Name
     await mongoose.connection.db.collection(user).drop();
